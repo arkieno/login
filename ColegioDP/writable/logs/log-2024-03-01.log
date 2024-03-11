@@ -1,0 +1,58 @@
+CRITICAL - 2024-03-01 14:13:53 --> Class "Myth\Auth\Filters\LoginFilter" not found
+in SYSTEMPATH\Filters\Filters.php on line 173.
+ 1 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('register', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+CRITICAL - 2024-03-01 14:14:54 --> Class "Myth\Auth\Authentication\Passwords\ValidationRules" not found
+in SYSTEMPATH\Validation\Validation.php on line 692.
+ 1 SYSTEMPATH\Validation\Validation.php(118): CodeIgniter\Validation\Validation->loadRuleSets()
+ 2 SYSTEMPATH\Config\Services.php(817): CodeIgniter\Validation\Validation->__construct(Object(Config\Validation), Object(CodeIgniter\View\View))
+ 3 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::validation(Object(Config\Validation), false)
+ 4 SYSTEMPATH\BaseModel.php(332): CodeIgniter\Config\BaseService::__callStatic('validation', [...])
+ 5 SYSTEMPATH\Model.php(155): CodeIgniter\BaseModel->__construct(null)
+ 6 APPPATH\Controllers\AuthController.php(16): CodeIgniter\Model->__construct()
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AuthController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+CRITICAL - 2024-03-01 14:16:02 --> Class "Myth\Auth\Authentication\Passwords\ValidationRules" not found
+in SYSTEMPATH\Validation\Validation.php on line 692.
+ 1 SYSTEMPATH\Validation\Validation.php(118): CodeIgniter\Validation\Validation->loadRuleSets()
+ 2 SYSTEMPATH\Config\Services.php(817): CodeIgniter\Validation\Validation->__construct(Object(Config\Validation), Object(CodeIgniter\View\View))
+ 3 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::validation(Object(Config\Validation), false)
+ 4 SYSTEMPATH\BaseModel.php(332): CodeIgniter\Config\BaseService::__callStatic('validation', [...])
+ 5 SYSTEMPATH\Model.php(155): CodeIgniter\BaseModel->__construct(null)
+ 6 APPPATH\Controllers\AuthController.php(16): CodeIgniter\Model->__construct()
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AuthController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+CRITICAL - 2024-03-01 14:16:06 --> Class "Myth\Auth\Authentication\Passwords\ValidationRules" not found
+in SYSTEMPATH\Validation\Validation.php on line 692.
+ 1 SYSTEMPATH\Validation\Validation.php(118): CodeIgniter\Validation\Validation->loadRuleSets()
+ 2 SYSTEMPATH\Config\Services.php(817): CodeIgniter\Validation\Validation->__construct(Object(Config\Validation), Object(CodeIgniter\View\View))
+ 3 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::validation(Object(Config\Validation), false)
+ 4 SYSTEMPATH\BaseModel.php(332): CodeIgniter\Config\BaseService::__callStatic('validation', [...])
+ 5 SYSTEMPATH\Model.php(155): CodeIgniter\BaseModel->__construct(null)
+ 6 APPPATH\Controllers\AuthController.php(16): CodeIgniter\Model->__construct()
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AuthController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+CRITICAL - 2024-03-01 14:16:19 --> Class "Myth\Auth\Authentication\Passwords\ValidationRules" not found
+in SYSTEMPATH\Validation\Validation.php on line 692.
+ 1 SYSTEMPATH\Validation\Validation.php(118): CodeIgniter\Validation\Validation->loadRuleSets()
+ 2 SYSTEMPATH\Config\Services.php(817): CodeIgniter\Validation\Validation->__construct(Object(Config\Validation), Object(CodeIgniter\View\View))
+ 3 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::validation(Object(Config\Validation), false)
+ 4 SYSTEMPATH\BaseModel.php(332): CodeIgniter\Config\BaseService::__callStatic('validation', [...])
+ 5 SYSTEMPATH\Model.php(155): CodeIgniter\BaseModel->__construct(null)
+ 6 APPPATH\Controllers\AuthController.php(16): CodeIgniter\Model->__construct()
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AuthController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')

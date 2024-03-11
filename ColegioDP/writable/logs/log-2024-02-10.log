@@ -1,0 +1,1190 @@
+ERROR - 2024-02-10 11:26:08 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\ColegioDP\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ColegioDP\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\ColegioDP\app\Controllers\Login.php(23): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Login->authenticate()
+#8 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\ColegioDP\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\ColegioDP\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\ColegioDP\app\Controllers\Login.php(23): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Login->authenticate()
+#7 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2024-02-10 11:26:08 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Login.php(23): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Login->authenticate()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+ERROR - 2024-02-10 11:27:51 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', Array, Array)
+#7 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', Array, NULL, 'email')
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', Array, Array)
+#6 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#7 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#8 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2024-02-10 11:27:51 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Register.php(30): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Register->register()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+ERROR - 2024-02-10 11:30:38 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', Array, Array)
+#7 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', Array, NULL, 'email')
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', Array, Array)
+#6 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#7 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#8 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2024-02-10 11:30:38 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Register.php(30): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Register->register()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+ERROR - 2024-02-10 11:31:26 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', Array, Array)
+#7 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', Array, NULL, 'email')
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', Array, Array)
+#6 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#7 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#8 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2024-02-10 11:31:26 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Register.php(30): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Register->register()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+ERROR - 2024-02-10 11:32:34 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', Array, Array)
+#7 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', Array, NULL, 'email')
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', Array, Array)
+#6 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#7 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#8 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2024-02-10 11:32:34 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Register.php(30): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Register->register()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+ERROR - 2024-02-10 11:32:39 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', Array, Array)
+#7 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', Array, NULL, 'email')
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', Array, Array)
+#6 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#7 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#8 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2024-02-10 11:32:39 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Register.php(30): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Register->register()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+ERROR - 2024-02-10 11:34:20 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', Array, Array)
+#7 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', Array, NULL, 'email')
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', Array, Array)
+#6 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#7 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#8 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2024-02-10 11:34:20 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Register.php(30): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Register->register()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+ERROR - 2024-02-10 11:34:58 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', Array, Array)
+#7 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', Array, NULL, 'email')
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', Array, Array)
+#6 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#7 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#8 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2024-02-10 11:34:58 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Register.php(30): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Register->register()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+ERROR - 2024-02-10 11:35:33 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', Array, Array)
+#7 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', Array, NULL, 'email')
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', Array, Array)
+#6 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#7 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#8 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2024-02-10 11:35:33 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Register.php(30): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Register->register()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+ERROR - 2024-02-10 11:36:46 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', Array, Array)
+#7 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', Array, NULL, 'email')
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', Array, Array)
+#6 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#7 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#8 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2024-02-10 11:36:46 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Register.php(30): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Register->register()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+ERROR - 2024-02-10 11:36:55 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', Array, Array)
+#7 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', Array, NULL, 'email')
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', Array, Array)
+#6 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#7 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#8 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2024-02-10 11:36:55 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('123@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', '123@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Register.php(30): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Register->register()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+ERROR - 2024-02-10 12:00:42 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan2...', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan2...', Array, Array)
+#7 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan2...', 'email', Array, NULL, 'email')
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan2...', Array, Array)
+#6 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#7 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#8 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2024-02-10 12:00:42 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan21@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan21@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Register.php(30): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Register->register()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+ERROR - 2024-02-10 12:01:04 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan2...', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan2...', Array, Array)
+#7 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan2...', 'email', Array, NULL, 'email')
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan2...', Array, Array)
+#6 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#7 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#8 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2024-02-10 12:01:04 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan21@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan21@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Register.php(30): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Register->register()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+ERROR - 2024-02-10 12:01:24 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan2...', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan2...', Array, Array)
+#7 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan2...', 'email', Array, NULL, 'email')
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan2...', Array, Array)
+#6 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#7 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#8 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2024-02-10 12:01:24 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan21@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan21@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Register.php(30): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Register->register()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+ERROR - 2024-02-10 12:02:57 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan2...', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan2...', Array, Array)
+#7 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan2...', 'email', Array, NULL, 'email')
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan2...', Array, Array)
+#6 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#7 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#8 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2024-02-10 12:02:57 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan21@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan21@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Register.php(30): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Register->register()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+ERROR - 2024-02-10 12:03:03 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan2...', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan2...', Array, Array)
+#7 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan2...', 'email', Array, NULL, 'email')
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan2...', Array, Array)
+#6 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#7 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#8 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2024-02-10 12:03:03 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan21@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan21@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Register.php(30): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Register->register()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+ERROR - 2024-02-10 12:03:32 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan2...', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan2...', Array, Array)
+#7 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan2...', 'email', Array, NULL, 'email')
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan2...', Array, Array)
+#6 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#7 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#8 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2024-02-10 12:03:32 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan21@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan21@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Register.php(30): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Register->register()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+ERROR - 2024-02-10 12:04:26 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', 'memory', 3306, '', 0)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan2...', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan2...', Array, Array)
+#7 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan2...', 'email', Array, NULL, 'email')
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan2...', Array, Array)
+#6 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#7 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#8 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2024-02-10 12:04:26 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan21@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan21@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Register.php(30): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Register->register()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+ERROR - 2024-02-10 12:05:21 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', 'memory', 3306, '', 0)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan2...', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan2...', Array, Array)
+#7 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan2...', 'email', Array, NULL, 'email')
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan2...', Array, Array)
+#6 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#7 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#8 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2024-02-10 12:05:21 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan21@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan21@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Register.php(30): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Register->register()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+ERROR - 2024-02-10 12:05:30 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', 'memory', 3306, '', 0)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan2...', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan2...', Array, Array)
+#7 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan2...', 'email', Array, NULL, 'email')
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan2...', Array, Array)
+#6 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#7 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#8 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2024-02-10 12:05:30 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan21@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan21@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Register.php(30): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Register->register()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+ERROR - 2024-02-10 12:06:04 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', 'memory', 3306, '', 0)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan2...', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan2...', Array, Array)
+#7 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan2...', 'email', Array, NULL, 'email')
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan2...', Array, Array)
+#6 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#7 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#8 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2024-02-10 12:06:04 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan21@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan21@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Register.php(30): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Register->register()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+ERROR - 2024-02-10 12:08:50 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', 'regis', 3306, '', 0)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan2...', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan2...', Array, Array)
+#7 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan2...', 'email', Array, NULL, 'email')
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan2...', Array, Array)
+#6 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#7 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#8 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2024-02-10 12:08:50 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan21@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan21@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Register.php(30): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Register->register()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+ERROR - 2024-02-10 12:10:00 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', ':memory:', 3306, '', 0)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan2...', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan2...', Array, Array)
+#7 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\ColegioDP\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\ColegioDP\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\ColegioDP\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\laragon\www\ColegioDP\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\ColegioDP\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan2...', 'email', Array, NULL, 'email')
+#5 C:\laragon\www\ColegioDP\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan2...', Array, Array)
+#6 C:\laragon\www\ColegioDP\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#7 C:\laragon\www\ColegioDP\app\Controllers\Register.php(30): CodeIgniter\Controller->validate(Array)
+#8 C:\laragon\www\ColegioDP\system\CodeIgniter.php(919): App\Controllers\Register->register()
+#9 C:\laragon\www\ColegioDP\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#10 C:\laragon\www\ColegioDP\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ColegioDP\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ColegioDP\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2024-02-10 12:10:00 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('rustomliquigan21@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rustomliquigan21@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Register.php(30): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Register->register()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')

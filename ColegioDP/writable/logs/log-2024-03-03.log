@@ -1,0 +1,69 @@
+CRITICAL - 2024-03-03 00:32:58 --> Attempt to read property "ruleSets" on null
+in SYSTEMPATH\Validation\Validation.php on line 112.
+ 1 SYSTEMPATH\Validation\Validation.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "ruleSets" on null', 'C:\\laragon\\www\\ColegioDP\\system\\Validation\\Validation.php', 112)
+ 2 SYSTEMPATH\Config\Services.php(817): CodeIgniter\Validation\Validation->__construct(null, Object(CodeIgniter\View\View))
+ 3 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::validation(null, false)
+ 4 SYSTEMPATH\BaseModel.php(332): CodeIgniter\Config\BaseService::__callStatic('validation', [...])
+ 5 SYSTEMPATH\Model.php(155): CodeIgniter\BaseModel->__construct(null)
+ 6 APPPATH\Controllers\AuthController.php(42): CodeIgniter\Model->__construct()
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AuthController->login()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+CRITICAL - 2024-03-03 00:33:11 --> Attempt to read property "ruleSets" on null
+in SYSTEMPATH\Validation\Validation.php on line 112.
+ 1 SYSTEMPATH\Validation\Validation.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "ruleSets" on null', 'C:\\laragon\\www\\ColegioDP\\system\\Validation\\Validation.php', 112)
+ 2 SYSTEMPATH\Config\Services.php(817): CodeIgniter\Validation\Validation->__construct(null, Object(CodeIgniter\View\View))
+ 3 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::validation(null, false)
+ 4 SYSTEMPATH\BaseModel.php(332): CodeIgniter\Config\BaseService::__callStatic('validation', [...])
+ 5 SYSTEMPATH\Model.php(155): CodeIgniter\BaseModel->__construct(null)
+ 6 APPPATH\Controllers\AuthController.php(42): CodeIgniter\Model->__construct()
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AuthController->login()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+CRITICAL - 2024-03-03 10:44:50 --> Class "App\Filters\Noauth" not found
+in SYSTEMPATH\Filters\Filters.php on line 173.
+ 1 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('register', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+CRITICAL - 2024-03-03 10:45:10 --> Class "App\Filters\Noauth" not found
+in SYSTEMPATH\Filters\Filters.php on line 173.
+ 1 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('register', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+CRITICAL - 2024-03-03 10:46:15 --> Class "App\Filters\Noauth" not found
+in SYSTEMPATH\Filters\Filters.php on line 173.
+ 1 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('login', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+CRITICAL - 2024-03-03 10:46:35 --> Class "App\Filters\Noauth" not found
+in SYSTEMPATH\Filters\Filters.php on line 173.
+ 1 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('login', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+CRITICAL - 2024-03-03 10:47:05 --> Class "App\Filters\Noauth" not found
+in SYSTEMPATH\Filters\Filters.php on line 173.
+ 1 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('login', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
+CRITICAL - 2024-03-03 11:26:10 --> Declaration of App\Filters\Noauth::before(CodeIgniter\HTTP\RequestInterface $request) must be compatible with CodeIgniter\Filters\FilterInterface::before(CodeIgniter\HTTP\RequestInterface $request, $arguments = null)
+in APPPATH\Filters\Noauth.php on line 11.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-03-03 16:34:20 --> syntax error, unexpected token "return", expecting "function" or "const"
+in APPPATH\Controllers\AuthController.php on line 69.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\ColegioDP\\app\\Controllers\\AuthController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\AuthController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\AuthController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\AuthController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ColegioDP\\public\\index.php')
